@@ -8,7 +8,7 @@ jobs:
         os: [ubuntu-lastest, ubuntu-20.04]
     steps:
       - name: echo a string
-        run: echoo "Hello Datascientest"
+        run: echo "Hello Datascientest"
       - name: multiline script
         run: |
           python3 -v
