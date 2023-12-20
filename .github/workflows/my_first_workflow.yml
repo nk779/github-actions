@@ -1,0 +1,16 @@
+name: Shell commands
+on: [push]
+jobs:
+  run-shell-command:
+    runs-on: ${{ matrix.os}}
+    strategy:
+      matrix:
+        os: [ubuntu-lastest, ubuntu-20.04]
+    steps:
+      - name: echo a string
+        run: echo "Hello Datascientest"
+      - name: multiline script
+        run: |
+          python3 -v
+          touch hn-workflow.py
+          ls -l
